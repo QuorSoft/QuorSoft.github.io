@@ -1,0 +1,60 @@
+.center
+  text-align: center
+//Headers
+h1, h2, h3, h4, h5, h6
+  color: $headlineColor
+  font-weight: bold
+
+h1
+  font-size: 68px
+  line-height: 1.05
+  letter-spacing: -1px
+
+h2
+  font-size: 42px
+  line-height: 1.14
+
+p
+  margin: 0 0 20px 0
+
+//Links
+a
+  color: $linkColor
+  text-decoration: none
+  outline: 0
+
+a:hover, a:focus
+  color: lighten($linkColor, 20%)
+
+//Style
+body
+  background: $documentBackgroundColor
+  font-size: 14px
+  line-height: 1.6
+  font-family: 'Open Sans' sans-serif
+  color: $textColor
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+
+//wrapper
+.wrapper
+  max-width: -webkit-calc(800px - (#{$spacing-unit} * 2))
+  max-width:         calc(800px - (#{$spacing-unit} * 2))
+  margin-right: auto
+  margin-left: auto
+  padding-right: $spacing-unit
+  padding-left: $spacing-unit
+  @extend %clearfix
+
+  @include media-query($on-laptop)
+    max-width: -webkit-calc(800px - (#{$spacing-unit}))
+    max-width:         calc(800px - (#{$spacing-unit}))
+    padding-right: $spacing-unit / 2
+    padding-left: $spacing-unit / 2
+
+//clearfix
+%clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both

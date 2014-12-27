@@ -1,0 +1,17 @@
+# Site settings
+title:
+email:
+description:
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://quorsoft.tk/" # the base hostname & protocol for your site
+twitter_username:
+github_username:
+
+# Build settings
+#highlighter: rouge
+markdown: kramdown
+exclude: ['README.md']
+
+sass:
+  sass_dir: assets/css
+  style: :nested
